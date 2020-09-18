@@ -1,75 +1,123 @@
-header {
-
-
+html, body {
+  margin: 0;
+  height: 100%;
 }
 
+header {
+  display: none;
+}
 
 h2 {
+  text-align: center;
+  border-style: solid;
+  flex-grow: 0.3;
+}
 
+li {
+  border-style: solid;
+  list-style-type: none;
+  text-align: center;
+}
+
+nav{
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 .nav {
-
-
-  }
-
-  li {
-
-
-  }
-
-  .content{
-
+  padding: 0;
 }
 
-  .aside {
+.content{
+  display: none;
+  border-style: solid;
+}
 
-  }
+.aside{
+  width: 33%;
+  border-style: solid;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 
-  .slidebox{
+.slidebox{
+  border-style: solid;
+  text-align: center;
+}
 
-   
-  }
-
-  .article{
-
-  }
-
+.article{
+  border-style: solid;
+  width: 67%;
+}
 
 .poem{
-
+  border-style: solid;
 }
 
 
 /*Device = Tablets, Ipads (portrait)
-  Screen = B/w 600px to 990px*/
-  @media (min-width:600px) and (max-width: 990px)  {
-    .article {
+Screen = B/w 600px to 990px*/
+@media (min-width:991px){
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .content{
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+  }
+  .article{
+    display: flex;
+    flex-direction: row;
 
-  } 
-header{
-
+  }
+  nav{
+    padding-right: 2em;
+    padding-left: 2em;
+  }
+  .nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  li {
+    flex-grow: 0.2;
+  }
 }
+
+/*Device = Tablets, Ipads (portrait)
+Screen = B/w 600px to 990px*/
+@media (min-width:600px) and (max-width: 990px)  {
+  .content{
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+  }
+  nav{
+    padding-right: 3em;
+    padding-left: 3em;
+  }
+  .nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
 /*  Small devices    */
 @media (max-width:599px) {
-
-header,.content{
-
-}
-
-.nav {
-
-
+  nav{
+    height: 100%;
   }
-
-
-.nav > li {
-
-}
-
-
+  .nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
 
 
